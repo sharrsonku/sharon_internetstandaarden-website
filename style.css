@@ -1,0 +1,458 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(illustrations/zwart.jpeg);
+    background-size: contain;
+}
+                                                                 /*Begin nav en font*/
+
+
+.land header{background-color: transparent;}
+
+header {
+    width: 100vw;
+    background-color: #000000; 
+    align-items: center;
+    position:fixed;
+    justify-content:space-evenly;
+    display: flex;
+    top: 0%;
+    z-index: 2;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+nav ul li a {
+    font-family: 'Tahoma';
+    font-weight: 900;
+    font-size: 1.5em;
+    color: rgb(47, 149, 218);
+    text-decoration: none;
+    display: block;
+    padding: 0.7em ;
+    line-height: 2em;
+}
+
+nav ul li a.active{color: white;}
+
+a:hover{color: rgb(255, 255, 255);transition: 0.2s;}
+
+h1,h2,h3 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    color: rgb(255, 255, 255);
+    font-size: 2em; 
+    text-align: center;
+}
+
+p{  color: rgb(255, 255, 255);
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 1.3em;
+}
+                                                                /*Begin style landinspage*/
+
+.land{ justify-content: center;align-items: center;}
+
+.back-video{
+    position:absolute;
+    background-size: cover;
+    right: 0em;
+    bottom: 0em;
+    z-index: -1;;
+}
+
+.land h1{
+    color: rgb(47, 149, 218); 
+    font-size:6em; 
+    font-weight: 800;
+    font-family: 'impact';
+    letter-spacing: 0.04em;
+    transform: translateY(250%);
+    -webkit-text-stroke-width: 0.01em;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+.land main a{ 
+    text-decoration: none; 
+    color: rgb(255, 255, 255) ; 
+    font-size: 1.5em; 
+    border: 0.2em solid rgb(255, 255, 255);
+    padding: 0.45em 1.6em;
+    border-radius: 5%;
+    font-family: 'impact';
+    position: absolute;
+    bottom: 37%;
+    left: 43%;
+}
+
+.land main a:hover{background: rgba(47, 149, 218);transition: 0.3s;}
+
+footer{
+    align-self:baseline;
+    font-family: 'impact';
+    font-weight: 400; 
+    letter-spacing: 0.06em;
+    bottom: 2%;
+    position: absolute;
+    color: rgb(255, 255, 255);}
+
+                                                                         /*Begin home */
+
+.wrapper-home{
+    height: 100vh;
+    width: 100vw;
+    justify-items: center;
+    align-items: center;
+    padding-top: 0em;
+    background-image: url(illustrations/banner.jpeg);
+    background-image: contain; 
+    scroll-behavior: smooth;
+}
+
+.wrapper-home h1{
+    position: absolute;
+    padding-top: 3.5em; 
+    font-size: 4.5em; 
+    text-shadow: 0.3em 0.2em 0.2em #000000; 
+}
+
+.graffiti-intro p{
+    position: absolute; 
+    background-color: rgba(0, 0, 0, 0.771); 
+    width: 26em;
+    height: 13em; 
+    text-align: left;
+    right: 0em; 
+    padding-left: 1em;
+    bottom: 5em;
+    padding-top: 2em;
+}
+
+.graffiti-intro{
+    width: 100vw; 
+    height: 100vh; 
+}
+
+.wrapper-home h2, 
+.wrapper-home h3{
+    line-height: 3em;
+}
+
+.col1 p:first-of-type{width: 30em; text-align: left; line-height: 1.2em;}
+
+.col1, .col{
+    display: flex; 
+    padding: 4em; 
+    gap: 1.4em;
+    padding-top: 1em;
+}
+
+.wrapper-home article:nth-of-type(1) {
+    padding-left: 3em; 
+    padding-right: 6em; 
+    text-align:justify;
+}
+
+.wrapper-home article:nth-of-type(1) p {color:rgb(47, 149, 218)}
+
+.wrapper-home img{width: 24em; height: 28em;}
+
+.col1 img:nth-child(3){
+    width: 15em; 
+    height: 22em; 
+    position: relative; 
+    transform: rotateZ(10deg);
+}
+.col{position: absolute; transform: translateY(-15em);}
+
+.col img{ width: 32em; height: 20em;}
+
+.col p{width: 20em; transform: translateY(8em); line-height: 1.2em;}
+
+                                                                /*Begin the notorious page*/
+                                    /*bron:Ik heb met behulp van https://www.youtube.com/watch?v=ytl6TrroGis de snap pages gemaakt */
+                                    /*bron:met behulv van https://www.youtube.com/watch?v=c0LgXZmK4Rw heb ik de typewriter kunnen maken*/
+
+.notorious{
+    scroll-snap-type: y mandatory; 
+    overflow-y: scroll; 
+    height: 100vh;
+    justify-content: center;
+}
+ .container-intro{ 
+    height: 100vh;
+    width: 100vw;
+    display: flex; 
+    align-items: center;
+    justify-content:center ;
+    scroll-snap-align:start;
+}
+                                                                 /*notorious intro typewriter*/
+
+.intro p, .intro h2{white-space:nowrap; overflow: hidden;}
+
+.intro p:nth-child(1){width: 49.2em; animation: type1 5s steps(95);}
+
+.intro p:nth-child(2){
+    width: 47.6em; 
+    animation: type2 5s steps(90, end); 
+    animation-delay: 5s; 
+    opacity: 0; 
+    animation-fill-mode: forwards; 
+} 
+
+.intro p:nth-child(3){
+    width: 44.2em; 
+    animation: type3 5s steps(84, end), cursor 0.5s step-end infinite alternate;
+    animation-delay: 10s; 
+    animation-fill-mode: forwards; 
+    opacity: 0;
+}
+
+.intro h2:nth-child(4){
+    position:absolute; 
+    bottom:2.5em; 
+    left: 3em;
+    width:13em; 
+    animation: type4 3.5s steps(25, end), cursor 0.5s step-end infinite alternate;
+    animation-delay: 15s; 
+    animation-fill-mode: forwards; 
+    opacity: 0; 
+    border-right: 2px solid;
+}
+
+@keyframes type1 {0%{width: 0%;}100%{}}
+
+@keyframes type2 {0%{width: 0%;}1%{opacity: 1;} 100%{opacity: 1}}
+
+@keyframes type3 {0%{width: 0%;}1%{opacity: 1;} 100%{opacity: 1}}
+
+@keyframes type4 {0%{width: 0%;}1%{opacity: 1;} 100%{opacity: 1}}
+
+@keyframes cursor{50%{border-color: transparent; }}
+
+                                                                    /*notorious info*/
+
+ .notorious-out{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    scroll-snap-align: start; 
+}
+
+.notorious-right{
+    width: 50%;
+    height: 85vh;
+    align-items: center;
+    justify-content: center; 
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.599);
+    padding: 1em; 
+}
+.notorious-right img{
+    height: 20em; 
+    width: 30em;
+    position: relative;
+    top: 3em;
+}
+
+.notorious-right h2{text-align: center; padding:4%}
+
+.notorious-right p{color:rgb(50, 146, 210); font-size: 1.2em;}
+
+.left{
+    width: 43em;
+    height: 100vh;
+    background: url(illustrations/darryl.jpeg) no-repeat center / contain;
+}
+
+.left1{
+    width: 42em;
+    height: 100vh;
+    background: url(illustrations/taki183.jpg) no-repeat center / contain;
+}
+
+.left2{
+    width: 42em;
+    height: 100vh;
+    background: url(illustrations/blek2.jpg) no-repeat center / contain;
+}
+
+.left3{
+    width: 42em;
+    height: 100vh;
+    background: url(illustrations/banksy.jpg) no-repeat center / cover;
+}
+                                                                    /*Begin styles page*/
+                        /*bron:Ik heb met behulp van https://www.youtube.com/watch?v=EiNiSFIPIQE de grid gemaakt en
+                             met https://www.youtube.com/watch?v=wslu40pa1ww de flip cards*/
+
+.flip-cards-container{
+    width: 100vw;
+    height: auto;
+    padding: 2%;
+    display: grid;
+    align-content:space-between;
+    grid-template-columns: repeat(3,1fr);
+    padding-top: 8em;
+    gap: 2em;
+}
+
+.grid1 p{
+    color: rgb(50, 146, 210);
+    text-align: center;
+    padding-right: 1.6em;
+    line-height: normal;
+    font-weight:500;
+}
+
+.grid1 h3{
+    text-align: center; 
+    font-size: 2.4em;
+    padding-right: 1.6em;
+    line-height: 2em;
+}
+
+.card-container{ 
+    transform-style: preserve-3d; 
+    width: 100%; 
+    height: 100%;  
+}
+
+                                                                    /*styles flip cards*/
+
+.card-container:nth-of-type(2) .card-front {
+    background-image: url(illustrations/tags.jpeg); 
+}
+
+.card-container:nth-of-type(3) .card-front {
+    background-image:url(illustrations/bleklerat.jpg);
+}
+
+.card-container:nth-of-type(4) .card-front {
+    background-image: url(illustrations/stickers.jpg); 
+}
+
+.card-container:nth-of-type(5) .card-front {
+    background-image: url(illustrations/blockbuster.jpeg); 
+}
+
+.card-container:nth-of-type(6) .card-front {
+    background-image: url(illustrations/wildstyle.jpeg); 
+}
+
+.card-container:nth-of-type(7) .card-front {
+    background-image: url(illustrations/masterpiece.jpeg); 
+}
+
+.card-container:nth-of-type(8) .card-front {
+    background-image: url(illustrations/character.jpeg); 
+}
+
+.card-container:nth-of-type(9) .card-front {
+    background-image: url(illustrations/throwup.jpeg); 
+}
+
+.card-front, 
+.card-back{
+    width: 25em;
+    height: 18em;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition:transform 0.7s;
+    background-color: rgb(50, 146, 210);
+}
+
+.card-front{
+    transform:rotateY(0deg); 
+    background-position: center; 
+    background-size: cover;
+}
+
+.card-content{
+    justify-content: center;
+    height: 20em; 
+    padding: 3%; 
+    text-align:right;
+}
+.card-back{
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0%; left: 0%;
+}
+
+.card-front .card-content, .card-back .card-content{ 
+    width: 100%;
+    position: absolute;
+    top: 11em;
+    left: -1em;
+    transform: translateY(-50%) translateZ(1em);
+    z-index: 2;
+}
+
+.card-front::after, .card-back::after{
+    content: "";
+    width: 100%; 
+    height: 100%; 
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.card-content h3{
+    color: white; font-size: 2em;
+    margin-bottom: 0.5em;
+    text-transform: capitalize; 
+    text-shadow: rgb(58, 58, 58) 0.1em 0.1em 0.5em ;
+}
+
+.card-content p:nth-of-type(1){
+    text-align: center;
+    line-height: 2em;
+}
+
+.card-container:hover .card-front{transform: rotateY(-180deg);}
+
+.card-container:hover .card-back{transform: rotateY(0deg);}
+
+                                                                    /* begin t&t*/                                                           
+                                                                    
+ .ttcontainer-tips, .ttcontainer-tricks{
+    width: 100vw; 
+    height: 100%; 
+    padding-top: 8em; 
+    justify-items:center ;  
+    align-items: center;  
+    display: flex; 
+    gap: 3em;
+    padding: 4em;
+}
+
+ .tt-banner{
+    justify-content: center;
+    align-content: center;
+    position:sticky;
+    background-image: url(illustrations/intro1.jpg) ;
+    background-repeat: no-repeat; 
+    background-position:top;
+    background-size: cover;
+    width: 100vw;
+}
+
+.tt-h1{ padding-top: 2em;  font-size: 4em; background-color: #00000025;}
+
+.ttcontainer-tips img , .ttcontainer-tricks img{width: 26em; height: 18em; gap: 1em;}
+
+.ttcontainer-tips p , .ttcontainer-tricks p{width: 18em; height: 10em; gap: 1em;}
+
+.ttcontainer-tricks{padding-top: 0%;}
+  
+
+
